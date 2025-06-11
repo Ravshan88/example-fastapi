@@ -14,6 +14,11 @@ async def shutdown_event():
     print("App is shutting down! Cleaning up resources...")
 
 
+@app.get("/")
+def root():
+    return {"Hello": "World"}
+
+
 origins = [
     '*'
 ]
